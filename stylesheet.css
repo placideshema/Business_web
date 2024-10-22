@@ -1,0 +1,41 @@
+/* Basic navbar styling */
+.navbar {
+    list-style: none;
+    display: relative;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.navbar li {
+    display: inline-block;
+    position: relative; /* Important for positioning the hover line */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0a0a09;
+    font-weight: bold;
+    padding: 10px 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Hover line styling */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    height: 3px;
+    width: 0px;
+    background-color: #1fcc10;
+    transition: width 0.3s ease-in-out;
+}
+
+/* On hover: the line expands under each individual link */
+.navbar a:hover::after {
+    width: 90%;
+}
