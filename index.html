@@ -8,15 +8,43 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body class="landing-page"> 
+
+        <!-- Nav for the header below -->
         <nav>
+            <a href="about_us.html"><img id="logo" src="log2.png" alt="logo"></a>
             <ul class="navbar">
                 <li><a href="about_us.html">About Us</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="travelling_p.html">Travelling Package</a></li>
-                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="destinations.html"><img id="icon" src ="Destination_icon.png" alt="Destination_icon" >Destinations</a></li>
+                <li><a href="travelling_p.html" class="dropdown-toggle">Travelling Package</a>
+                    <ul class="dropdown">
+                        <li><a href="regular_id">Regular Package</a></li>
+                        <li><a href="premium_id">Premium Package</a></li>
+                        <li><a href="special_id">Special Package</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookings.html"><img id="icon" src ="cart.jpg" alt="Booking_icon" >Bookings</a></li>
             </ul>
-            <div class="hover-line"></div>
+            <div class="hover-line"></div> 
         </nav>
-        <script src="script.js"></script>
+        <script src="script.js"></script> <!--call the script.js file-->
+        <div class="floating"></div> <!-- removing the floating for logo-->
+
+        <script>
+            $(document).ready(function() {
+                
+                // Toggle dropdown on click
+                $('.dropdown-toggle').click(function(event) {
+                    event.preventDefault(); 
+                    $(this).next('.dropdown').slideToggle();
+                });
+
+                // Close the dropdown if clicked outside
+                $(document).click(function(event) {
+                    if (!$(event.target).closest('.navbar li').length) {
+                        $('.dropdown').slideUp(); // Slide up the dropdown menu
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
