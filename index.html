@@ -6,6 +6,9 @@
         <title>Tourism Website</title>
         <link rel="stylesheet" href="stylesheet.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
     </head>
     <body class="landing-page"> 
 
@@ -56,6 +59,162 @@
 
         <h1 class="name">Akwabeza Tours</h1>
         <!-- footer -->
+
+        <div class="slides">
+            <img src="slide1.jpg" alt="first picture">
+            <img src="slide2.jpg" alt="second picture">
+            <img src="slide3.jpg" alt="second picture">
+            <img src="slide4.jpg" alt="second picture">
+            <img src="slide5.jpg" alt="second picture">
+            <img src="slide6.jpg" alt="second picture">
+            <img src="slide7.jpg" alt="second picture">
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tourism Website</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    </head>
+    <body class="landing-page"> 
+
+        <!-- Nav for the header below -->
+        <nav>
+            <a href="index.html"><img id="logo" src="log2.png" alt="logo"></a>
+            <ul class="navbar">
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="travelling_p.html" class="dropdown-toggle">Travelling Packages
+                    <img class="dropping" src="dropping.png" alt="dropdown">
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="regular_id">Regular Package</a></li>
+                        <li><a href="premium_id">Premium Package</a></li>
+                        <li><a href="special_id">Special Package</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookings.html"><img id="icon" src ="cart.jpg" alt="Booking_icon" >Bookings</a></li>
+            </ul>
+            <div class="hover-line"></div> 
+        </nav>
+        <script src="script.js"></script> <!--call the script.js file-->
+        <div class="floating"></div> <!-- removing the floating for logo-->
+
+        <script>
+            $(document).ready(function() {
+                // Toggle dropdown on click
+                $('.dropdown-toggle').click(function(event) {
+                    event.preventDefault(); 
+                    
+                    // Slide toggle the dropdown
+                    $(this).next('.dropdown').slideToggle();
+                    
+                    // Toggle the rotated class for the dropping icon
+                    $(this).find('.dropping').toggleClass('rotate');
+                });
+
+                // Close the dropdown if clicked outside
+                $(document).click(function(event) {
+                    if (!$(event.target).closest('.navbar li').length) {
+                        $('.dropdown').slideUp(); // Slide up the dropdown menu
+                        $('.dropping').removeClass('rotate'); 
+                    }
+                });
+            });
+        </script>
+
+        <h1 class="name">Akwabeza Tours</h1>
+        <!-- footer -->
+
+        <div class="slides">
+            <img src="slide1.jpg" alt="first picture">
+            <img src="slide2.jpg" alt="second picture">
+            <img src="slide3.jpg" alt="second picture">
+            <img src="slide4.jpg" alt="second picture">
+            <img src="slide5.jpg" alt="second picture">
+            <img src="slide6.jpg" alt="second picture">
+            <img src="slide7.jpg" alt="second picture">
+            <img src="slide8.jpg" alt="second picture">
+
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                // Initialize the slider
+                $('.slides').slick({
+                    slidesToShow: 1,  // Number of images to show at once
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1000,  // Speed in milliseconds
+                    arrows: false,  // Remove navigation arrows
+                    dots: false,    // Remove dots
+                    infinite: true, // Infinite loop of images
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+
+        <footer>
+            <p>&copy; 2024 website. All rights reserved</p>
+            <nav>
+                <div class="footer_bars">
+                    <a href="policy.html">Terms of Services</a>
+                    <a href="connect.html">Contact Us</a>
+                    <a href="sign_up.html">Contact Us</a>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>
+
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                // Initialize the slider
+                $('.slides').slick({
+                    slidesToShow: 3,  // Number of images to show at once
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,  // Speed in milliseconds
+                    arrows: false,  // Remove navigation arrows
+                    dots: false,    // Remove dots
+                    infinite: true, // Infinite loop of images
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+
         <footer>
             <p>&copy; 2024 website. All rights reserved</p>
             <nav>
