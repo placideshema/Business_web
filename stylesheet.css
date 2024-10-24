@@ -1,37 +1,37 @@
-/* Basic navbar styling */
 .body{
     background-color: white;
     background-repeat: no-repeat;
-    flex-direction: column;
 }
 .html,body{
     margin:0;
     padding: 0;
+    height: 100%;
 }
 .navbar {
-    list-style: none;
-    display: relative;
-    justify-content: space-around;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     margin: 0;
-    padding: 20px;
+    padding: 2vw;
     position: relative;
     text-align: right;
-
+    background-color: rgb(252, 252, 252);
 }
 
 .navbar li {
     display: inline-block;
     position: relative;
     list-style: none;
+    font-size: 1.3vw; /* ensuring it works for all screen size*/
 }
 /* @media */
 .navbar a {
     text-decoration: none;
     color: #0a0a09;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
     position: relative;
-    display: inline-block;
+    display: flex;
 }
 
 /* Hover line styling */
@@ -40,7 +40,7 @@
     position: absolute;
     left: 5px;
     bottom: 0;
-    height: 3px;
+    height: 0.2vw;
     width: 0px;
     background-color: #0e6406;
     transition: width 0.3s ease-in-out;
@@ -52,37 +52,45 @@
 }
 #logo{
     list-style: none;
-    width: 100px;
+    width: 8vw; /* Set width as a percentage of the viewport width */
     height: auto;
     position: relative;
     float: left;
 }
 #icon{
-    width: 20px;
-    height:20px;
+    width: 1.5vw;
+    height:auto;
     margin-right: 8px; 
-    position: relative;
-    top: 3px;
-
+    position: flex;
 }
-.floating{
-    clear:both;
-    height: 0;
+
+.dropping {
+    margin-left: 0.4vw;
+    width: 1.5vw;
+    height:auto;
+    margin-right: 8px; 
+    position: flex;
+    transition: transform 0.3s ease; /* Making Smooth rotation */
+}
+.rotate{
+    transform: rotate(180deg); /* rotated 180 degrees*/
 }
 .dropdown {
     display: none; /* Hide dropdown by default */
     position: absolute; /*relative to its parent li */
-    margin-top: 10px;
+    margin-top: 1.2vw;
     padding: 0;
-    font-size: 14px; 
     font-family:'Times New Roman', Times, serif;
     text-align: justify;
-    padding-left: 40px;
-
+    padding-left: 4vw;
+    box-shadow: 0px 0.5vw 1vw rgba(13, 105, 32, 0.1); /* box for better view */
+    border-radius: 0.4vw; /* added radius */
 }
 
 .dropdown li {
-    list-style: none;
+    list-style: square;
+    font-size: 1.1vw;
+    list-style-position: inside;
 }
 
 .dropdown li a {
@@ -90,7 +98,51 @@
     padding: 7px; 
     text-decoration: none;
     color: #0a0a09;
+
 }
 .dropdown a:hover{
     color: rgb(44, 34, 178);
+}
+.floating{
+    clear:both;
+    height: 0;
+}
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    position: relative;
+    padding: 1.5vw;
+    top: 100px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1vw;
+    bottom: 0;
+}
+
+footer .footer_bars a {
+    color: rgb(9, 19, 130);
+    text-decoration: none; 
+    padding: 0.5vw;
+    transition: background 0.3s;
+    text-align: center;
+    list-style: none;
+    position: relative; 
+    display: inline-block; 
+}
+
+.footer_bars a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; /* starting the line from zero */
+    height: 0.2vw;
+    width: 0px;
+    background-color: #0e6406;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer_bars a:hover::after {
+    width: 100%; /* pushing the line to be full*/
 }
