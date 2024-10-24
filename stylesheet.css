@@ -38,7 +38,7 @@
 .navbar a::after {
     content: '';
     position: absolute;
-    left: 5px;
+    left: 0.2rem;
     bottom: 0;
     height: 0.2vw;
     width: 0px;
@@ -108,11 +108,11 @@
     height: 0;
 }
 footer {
-    background-color: white;
+    background-color: rgb(225, 228, 238);
     color: black;
     text-align: center;
     position: relative;
-    padding: 1.5vw;
+    padding: 1.7vw;
     justify-content: center;
     align-items: center;
     font-size: 1.1vw;
