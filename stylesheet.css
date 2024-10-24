@@ -170,7 +170,7 @@ footer .footer_bars a {
 .slides img {
     width: 30vw;
     height: 20vw; /* Set a consistent height */
-    object-fit: cover; /* Ensure the images are cropped properly to fit */
+    object-fit: cover; 
     animation: slideImages 0.5s linear infinite;
 
 }
