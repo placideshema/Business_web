@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en"> 
     <head>
         <meta charset="UTF-8">
@@ -6,59 +6,36 @@
         <title>Tourism Website</title>
         <link rel="stylesheet" href="stylesheet.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+        <link rel="icon" href="logo.jpeg" type="image/jpeg">
     </head>
     <body class="landing-page"> 
 
         <!-- Nav for the header below -->
-        <nav>
+        <div class = "headers">
             <a href="index.html"><img id="logo" src="log2.png" alt="logo"></a>
-            <ul class="navbar">
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="travelling_p.html" class="dropdown-toggle">Travelling Packages
+            <nav class="navbar">
+                <a href="about_us.html">About Us</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="travelling_p.html" class="dropdown-toggle">Travelling Packages
                     <img class="dropping" src="dropping.png" alt="dropdown">
                     </a>
-                    <ul class="dropdown">
-                        <li><a href="regular_id">Regular Package</a></li>
-                        <li><a href="premium_id">Premium Package</a></li>
-                        <li><a href="special_id">Special Package</a></li>
-                    </ul>
-                </li>
-                <li><a href="bookings.html"><img id="icon" src ="cart.jpg" alt="Booking_icon" >Bookings</a></li>
-            </ul>
+                    <div class="dropdown">
+                        <a href="regular_id">Regular Package</a>
+                        <a href="premium_id">Premium Package</a>
+                        <a href="special_id">Special Package</a>
+                    </div>
+                <a href="bookings.html"><img id="icon" src ="cart.jpg" alt="Booking_icon" >Bookings</a>
+            </nav>
+        </div>
             <div class="hover-line"></div> 
-        </nav>
-        <script src="script.js"></script> <!--call the script.js file-->
         <div class="floating"></div> <!-- removing the floating for logo-->
-
-        <script>
-            $(document).ready(function() {
-                // Toggle dropdown on click
-                $('.dropdown-toggle').click(function(event) {
-                    event.preventDefault(); 
-                    
-                    // Slide toggle the dropdown
-                    $(this).next('.dropdown').slideToggle();
-                    
-                    // Toggle the rotated class for the dropping icon
-                    $(this).find('.dropping').toggleClass('rotate');
-                });
-
-                // Close the dropdown if clicked outside
-                $(document).click(function(event) {
-                    if (!$(event.target).closest('.navbar li').length) {
-                        $('.dropdown').slideUp(); // Slide up the dropdown menu
-                        $('.dropping').removeClass('rotate'); 
-                    }
-                });
-            });
-        </script>
-
         <h1 class="name">Akwabeza Tours</h1>
         <!-- footer -->
 
         <div class="slides">
-            <marquee width="90%" direction="left" height=auto>
+            <marquee width="95%" direction="left" height=auto>
                 <img src="slide1.jpg" alt="picture">
                 <img src="slide2.jpg" alt="picture">
                 <img src="slide3.jpg" alt="picture">
@@ -70,15 +47,35 @@
                 <img src="slide7.webp" alt="picture">
             </marquee>
         </div>
-        <footer>
-            <p>&copy; 2024 website. All rights reserved</p>
-            <nav>
-                <div class="footer_bars">
-                    <a href="policy.html">Terms of Services</a>
-                    <a href="connect.html">Contact Us</a>
-                    <a href="sign_up.html">Sign up</a>
-                </div>
-            </nav>
-        </footer>
+        <h1 class="title2">What we do:</h1>
+        <div class="trip-list">
+            <div>
+                <span>1</span> <strong>Luxury</strong> Trips
+            </div>
+            <div>
+                <span>2</span> <strong>Nature</strong> Trips
+            </div>
+            <div>
+                <span>3</span> <strong>Couple</strong> Trips
+            </div>
+            <div>
+                <span>4</span> <strong>Solo</strong> Vacations
+            </div>
+        </div>
+        <script src="script.js"></script>
     </body>
+    <footer>
+        <p>&copy; 2024 website. All rights reserved</p>
+        <div class="footer_bars">
+            <a href="terms.html">Terms of Services</a>
+            <a href="connect.html">Contact Us</a>
+            <a href="sign_up.html">Sign up</a>
+        </div>
+        <div class="soical-media-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </footer>
 </html>

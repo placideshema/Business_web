@@ -1,37 +1,47 @@
 .body{
     background-color: white;
     background-repeat: no-repeat;
+    padding-top: 0;
+    padding-bottom: 10vw;
 }
 .html,body{
     margin:0;
     padding: 0;
-    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    padding: 2vw;
-    position: relative;
+.headers{
+    position: fixed;
+    list-style-type: none;
+    padding: 10px;
     text-align: right;
-    background-color: rgb(252, 252, 252);
+    margin: 0;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 5.9rem;
+    margin-bottom: 20px;
+    background-color:white;
+
 }
 
-.navbar li {
-    display: inline-block;
-    position: relative;
-    list-style: none;
-    font-size: 1.3vw; /* ensuring it works for all screen size*/
+.navbar {
+    margin-top: 2vw;
+    display: flex;
+    justify-content: flex-end;
+    gap:1vw;
 }
-/* @media */
+
 .navbar a {
     text-decoration: none;
     color: #0a0a09;
     font-weight: bold;
     padding: 1vw 2vw;
-    position: relative;
     display: flex;
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    font-size: 1.3vw; /* ensuring it works for all screen size*/
 }
 
 /* Hover line styling */
@@ -54,8 +64,8 @@
     list-style: none;
     width: 8vw; /* Set width as a percentage of the viewport width */
     height: auto;
-    position: relative;
     float: left;
+
 }
 #icon{
     width: 1.5vw;
@@ -78,71 +88,55 @@
 .dropdown {
     display: none; /* Hide dropdown by default */
     position: absolute; /*relative to its parent li */
-    margin-top: 1.2vw;
+    margin-top: 4vw;
+    margin-right: 14vw;
     padding: 0;
     font-family:'Times New Roman', Times, serif;
     text-align: justify;
-    padding-left: 4vw;
     box-shadow: 0px 0.5vw 1vw rgba(13, 105, 32, 0.1); /* box for better view */
     border-radius: 0.4vw; /* added radius */
 }
 
-.dropdown li {
+.dropdown a {
     list-style: square;
     font-size: 1.1vw;
     list-style-position: inside;
-}
-
-.dropdown li a {
     display: block; 
     padding: 7px; 
     text-decoration: none;
     color: #0a0a09;
-
 }
 .dropdown a:hover{
     color: rgb(44, 34, 178);
 }
+
 .floating{
     clear:both;
     height: 0;
 }
+
 footer {
-    background-color: rgb(225, 228, 238);
-    color: black;
-    text-align: center;
-    position: relative;
-    padding: 1.7vw;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1vw;
+    background-color: rgb(49, 49, 60);
+    height: 140px;
+    width: 100%;
+    text-align:center;
     bottom: 0;
+    position: relative;
 }
 
-footer .footer_bars a {
-    color: rgb(9, 19, 130);
+.footer_bars a, p {
+    color: white;
     text-decoration: none; 
     padding: 0.5vw;
     transition: background 0.3s;
     text-align: center;
-    list-style: none;
-    position: relative; 
-    display: inline-block; 
+    display: inline-block;
 }
 
-.footer_bars a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0; /* starting the line from zero */
-    height: 0.2vw;
-    width: 0px;
-    background-color: #0e6406;
-    transition: width 0.3s ease-in-out;
-}
-
-.footer_bars a:hover::after {
-    width: 100%; /* pushing the line to be full */
+.footer_bars a:hover{
+    background-color: #b1bfb5;
+    border-radius: 5px;
+    color: rgb(16, 25, 40);
 }
 
 /* Define the pop-in animation */
@@ -162,17 +156,92 @@ footer .footer_bars a {
     font-size: 2.5vw; 
     text-align: center; 
     animation: pop-in 2s ease-in-out;
+    padding-top: 10vw;
     margin: 2vw 0; 
-    color: #0e6406;
+    color: rgb(37, 50, 73);
 }
-
+.title2{
+    font-size: 2vw; 
+    text-align: center; 
+    animation: pop-in 2s ease-in-out;
+    padding-top: 2vw;
+    margin: 2vw 0; 
+    color: rgb(37, 50, 73);
+}
 /* moving images behind Company's name */
+.slides{
+    padding-left: 5vw;
+}
 .slides img {
     width: 30vw;
     height: 20vw; /* Set a consistent height */
     object-fit: cover; 
     animation: slideImages 0.5s linear infinite;
-
 }
 
+.soical-media-icons {
+    justify-content: center;
+    display: flex;
+}
 
+.soical-media-icons a {
+    margin-top: 7px;
+    color: white;
+    font-size: 35px;
+    margin-left: 23px;
+    margin-right: 23px;
+    text-decoration: none;
+}
+
+.soical-media-icons a:hover {
+    color: rgb(111, 139, 186);
+}
+
+div span {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background-color:#0e6406;
+    font-size: 15px;
+    color:#fff;
+}
+
+.trip-list {
+    /* text-align: center; */
+    margin-left: 43vw;
+    margin-bottom: 5vw;
+    padding-right: 20px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/* style for the terms of service */
+.license_content {
+    background-color: #fff;
+    color: #0d2797;
+    overflow-y: scroll;
+    height: 600px;
+    width: 796px;
+    border: 2px solid #d0d4e5;
+    display: block;
+    padding: 40px;
+    margin: auto;
+}
+
+.license_content p{
+    color: #12151d;
+    text-align: justify;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: 'Trebuchet MS';
+}
+.terms {
+    font-size: 2vw;
+    text-align: center;
+    animation: pop-in 2s ease-in-out;
+    padding-top: 10vw;
+    color: rgb(37, 50, 73);
+}
