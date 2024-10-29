@@ -5,39 +5,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tourism Website</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="icon" href="logo.jpeg" type="image/jpeg">
     </head>
-    <body class="landing-page"> 
+    <body class="landing-page">
+        <!-- Nav for the header below -->
+        <div class = "headers">
+            <a href="index.html"><img id="logo" src="log2.png" alt="logo"></a>
+            <nav class="navbar">
+                <a href="about_us.html">About Us</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="travelling_p.html" class="dropdown-toggle">Travelling Packages
+                    <img class="dropping" src="dropping.png" alt="dropdown">
+                    </a>
+                    <div class="dropdown">
+                        <a href="regular_id">Regular Package</a>
+                        <a href="premium_id">Premium Package</a>
+                        <a href="special_id">Special Package</a>
+                    </div>
+                <a href="bookings.html"><img id="icon" src ="cart.jpg" alt="Booking_icon" >Bookings</a>
+            </nav>
+        </div> 
+        <div class="hover-line"></div> 
+        <div class="floating"></div> <!-- removing the floating for logo-->
+        <h1 class="name">Popular Destinations</h1>
         <div class="row">
-            <div class="text">
-                <h2>Dubai</h2>
-                <p></p>
-            </div>
-            <div class="image">
-                <img src="dubai1.jpg" alt="Dubai">
-            </div>
+            <img src="slide2.jpg" alt="Dubai">
+            <h2>Dubai</h2>
+            <div class="floating"></div>
         </div>
         <div class="row">
-            <div class="image">
-                <img src="shanghai1.jpg" alt="Shanghai">
-            </div>
-            <div class="text">
-                <h2>Shanghai</h2>
-                <p></p>
-            </div>
+            <img id="second-img" src="slide1.jpg" alt="Shanghai">
+            <h2>Shanghai</h2>
+            <div class="floating"></div>
         </div> 
         <div class="row">
-            <div class="text">
-                <h2>Paris</h2>
-                <p></p>
-            </div>
-            <div class="image">
-                <img src="Paris1.jpg" alt="Paris">
-            </div>
+            <img src="slide3.jpg" alt="Paris">
+            <h2>Paris</h2> 
+            <div class="floating"></div>
         </div>  
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+        <script src="./script.js"></script>
     </body>
     <footer>
         <p>&copy; 2024 website. All rights reserved</p>
