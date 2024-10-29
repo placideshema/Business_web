@@ -36,3 +36,18 @@ $(document).ready(function() {
         });
     }).scroll();
 });
+
+$(document).ready(function() {
+    $('.row').each(function() {
+        var element = this;
+        new Waypoint({
+            element: element,
+            handler: function() {
+                $(element).addClass('fade-in');
+            },
+            offset: '80%' 
+        });
+    });
+});
+  
+  
