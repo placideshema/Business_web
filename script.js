@@ -58,7 +58,6 @@ $(document).ready(function() {
     checkVisibility(); // Initial check when the page loads
 });
 
-
 // moving departments of contact us!
 $(document).ready(function() {
     $(window).on('scroll', function() {
@@ -72,3 +71,18 @@ $(document).ready(function() {
         });
     });
 });
+
+// destination.
+$(document).ready(function() {
+    $('.row').each(function() {
+        var element = this;
+        new Waypoint({
+            element: element,
+            handler: function() {
+                $(element).addClass('fade-in');
+            },
+            offset: '80%' 
+        });
+    });
+});
+  
