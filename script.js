@@ -36,3 +36,39 @@ $(document).ready(function() {
         });
     }).scroll();
 });
+
+//animation for the right contents of the contact html
+$(document).ready(function() {
+    const $rightContents = $('.right-contents');
+
+    // Check if the element is in the viewport
+    function checkVisibility() {
+        const windowHeight = $(window).height();
+        const scrollTop = $(window).scrollTop();
+        const elementTop = $rightContents.offset().top;
+
+        // If the element is in the viewport
+        if (elementTop < scrollTop + windowHeight) {
+            $rightContents.addClass('show'); // Add the 'show' class
+            $(window).off('scroll', checkVisibility); // Remove the scroll event listener
+        }
+    }
+
+    $(window).on('scroll', checkVisibility); // Check visibility on scroll
+    checkVisibility(); // Initial check when the page loads
+});
+
+
+// moving departments of contact us!
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+        $('.contact-department').each(function() {
+            const elementTop = $(this).offset().top;
+            const windowBottom = $(window).scrollTop() + $(window).height();
+            
+            if (elementTop < windowBottom - 100) { 
+                $(this).addClass('visible');
+            }
+        });
+    });
+});
