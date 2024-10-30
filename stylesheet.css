@@ -19,7 +19,6 @@
     right: 0;
     z-index: 1000;
     width: 100%;
-    height: 5.9rem;
     margin-bottom: 20px;
     background-color:white;
 
@@ -87,7 +86,7 @@
 }
 .dropdown {
     background-color: white;
-    height: 6rem;
+    height: 8vw;
     display: none; /* Hide dropdown by default */
     position: absolute; /*relative to its parent li */
     margin-top: 4vw;
@@ -100,12 +99,12 @@
 }
 
 .dropdown a {
-    margin-left: 0.5rem;
+    margin-left: 0.5vw;
     list-style: square;
     font-size: 1.1vw;
     list-style-position: inside;
     display: block; 
-    padding: 7px; 
+    padding: 0.7vw; 
     text-decoration: none;
     color: #0a0a09;
 }
@@ -375,6 +374,7 @@ div span {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 3s ease-out, transform 3s ease-out;
+    margin-bottom: 5vw;
 }
 
 /* Fade-in style */
@@ -391,7 +391,14 @@ div span {
     list-style-type: none;
 }
 
-.row_text h2 {
+#second-row li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 25rem;
+    list-style-type: none;
+}
+
+#second-row h2 {
     text-align: center;
 }
 
@@ -471,3 +478,21 @@ div span {
 .submit-btn:hover {
     background-color: #45a049;
 }
+
+.book-button {
+    width: 250px;
+    height: 50px;
+    background-color: #e7f0ea;
+    box-shadow: 0.3vw 0.3vw 1vw rgba(4, 168, 36, 0.5);
+    font-weight: 800;
+}
+
+#second-row button {
+    margin-left: 27.5rem;
+}
+
+.book-button:hover {
+    box-shadow: 0.4vw 0.4vw 2vw rgba(4, 168, 36, 0.5);
+}
+
+
