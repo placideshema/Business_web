@@ -86,6 +86,8 @@
     transform: rotate(180deg); /* rotated 180 degrees*/
 }
 .dropdown {
+    background-color: white;
+    height: 6rem;
     display: none; /* Hide dropdown by default */
     position: absolute; /*relative to its parent li */
     margin-top: 4vw;
@@ -98,6 +100,7 @@
 }
 
 .dropdown a {
+    margin-left: 0.5rem;
     list-style: square;
     font-size: 1.1vw;
     list-style-position: inside;
@@ -390,4 +393,81 @@ div span {
 
 .row_text h2 {
     text-align: center;
+}
+
+/* sign-up form css style*/
+.signup-container {
+    max-width: 30rem;
+    margin: 30px auto;
+    padding: 20px;
+}
+.signup-container:hover{
+    box-shadow: 0px 1vw 2vw rgba(4, 168, 36, 0.5); /* box shadows*/
+}
+
+.signup-form {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input {
+    cursor: pointer;  /* using a cursor for input*/
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    transition: all 0.3s;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group input:valid {
+    border-color: #4CAF50;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    padding: 0 5px;
+    color: #4CAF50;
+}
+
+.submit-btn {
+    margin-left: 4.4rem;
+    width: 70%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700; /* increase the visibilit, bording*/
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
 }

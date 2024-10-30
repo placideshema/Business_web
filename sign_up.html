@@ -32,7 +32,38 @@
             <div class="hover-line"></div> 
         <div class="floating"></div> <!-- removing the floating for logo-->
         <h1 class="name">Sign up</h1>
-   
+
+        <!-- sign_up form -->
+        <div class="signup-container">
+            <form id="signupForm" class="signup-form">
+                <div class="form-group">
+                    <input type="text" id="fullName" required>
+                    <label for="fullName">Full Name</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="phone" required>
+                    <label for="phone">Phone Number</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" required>
+                    <label for="confirmPassword">Confirm Password</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Start Your Journey</button>
+            </form>
+        </div>
         <script src="script.js"></script>
     </body>
     <footer>
@@ -42,6 +73,7 @@
             <a href="connect.html">Contact Us</a>
             <a href="sign_up.html">Sign up</a>
         </div>
+
         <div class="soical-media-icons">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-twitter"></a>

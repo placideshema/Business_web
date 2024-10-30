@@ -86,3 +86,92 @@ $(document).ready(function() {
     });
 });
   
+
+// script for submitions:
+document.addEventListener("DOMContentLoaded", function() {
+    const signupForm = document.getElementById("signupForm");
+
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+
+    // Function to mark the valid input
+    function markInvalid(input) {
+        input.style.borderColor = "red";
+    }
+
+    // Function to reset the border color for input
+    function resetBorder(input) {
+        input.style.borderColor = "";
+    }
+
+    // Validation functions
+    function validateName() {
+        if (fullName.value.trim() === "") {
+            markInvalid(fullName);
+            return false;
+        }
+        resetBorder(fullName);
+        return true;
+    }
+
+    function validateEmail() {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value.trim())) {
+            markInvalid(email);
+            return false;
+        }
+        resetBorder(email);
+        return true;
+    }
+
+    function validatePhone() {
+        const phonePattern = /^\+?[0-9\s-]{7,15}$/;
+        if (!phonePattern.test(phone.value.trim())) {
+            markInvalid(phone);
+            return false;
+        }
+        resetBorder(phone);
+        return true;
+    }
+
+    function validatePassword() {
+        if (password.value.trim().length < 8) {
+            markInvalid(password);
+            return false;
+        }
+        resetBorder(password);
+        return true;
+    }
+
+    function validateConfirmPassword() {
+        if (confirmPassword.value !== password.value) {
+            markInvalid(confirmPassword);
+            return false;
+        }
+        resetBorder(confirmPassword);
+        return true;
+    }
+
+    // Form submission handler
+    signupForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isPhoneValid = validatePhone();
+        const isPasswordValid = validatePassword();
+        const isConfirmPasswordValid = validateConfirmPassword();
+
+        if (isNameValid && isEmailValid && isPhoneValid && isPasswordValid && isConfirmPasswordValid) {
+            signupForm.submit(); // Submit if all fields are valid
+        }
+    });
+
+    // Real-time validation to clear the red border on focus
+    [fullName, email, phone, password, confirmPassword].forEach(input => {
+        input.addEventListener("input", () => resetBorder(input));
+    });
+});
