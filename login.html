@@ -9,29 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
         <link rel="icon" href="logo.jpeg" type="image/jpeg">
-        <style>
-            .submit-btn {
-                margin-left: 4.4rem;
-                width: 70%;
-                padding: 12px;
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                border-radius: 4px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: background-color 0.3s;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                font-weight: 700; /* increase the visibility, bording*/
-            }
-
-        .submit-btn:hover {
-            background-color: #30cd38;
-        }
-        </style>
     </head>
-    <body class="landing-page"> 
+    <body class="landing-page">
 
         <!-- Nav for the header below -->
         <div class = "headers">
@@ -52,40 +31,21 @@
         </div>
             <div class="hover-line"></div> 
         <div class="floating"></div> <!-- removing the floating for logo-->
-        <h1 class="name">Sign up</h1>
+        <h1 class="name">Welcome back!</h1>
 
         <!-- sign_up form -->
         <div class="signup-container">
             <form id="signupForm" class="signup-form">
                 <div class="form-group">
-                    <input type="text" id="fullName" required>
-                    <label for="fullName">Full Name</label>
-                </div>
-                
-                <div class="form-group">
                     <input type="email" id="email" required>
                     <label for="email">Email Address</label>
                 </div>
-
-                <div class="form-group">
-                    <input type="tel" id="phone" required>
-                    <label for="phone">Phone Number</label>
-                </div>
-
+                
                 <div class="form-group">
                     <input type="password" id="password" required>
                     <label for="password">Password</label>
                 </div>
-
-                <div class="form-group">
-                    <input type="password" id="confirmPassword" required>
-                    <label for="confirmPassword">Confirm Password</label>
-                </div>
-
-                <button type="submit" class="submit-btn">Sign up</button>
-    
-                <!-- create a login for its page navigation -->
-                <button type="submit" class="login-btn" id="loginButton">Have an account? Login</button>
+                <button type="submit" class="submit-btn">Login</button>
             </form>
         </div>
         <script src="script.js"></script>

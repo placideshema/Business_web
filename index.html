@@ -1,5 +1,5 @@
  <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
         <link rel="icon" href="logo.jpeg" type="image/jpeg">
     </head>
-    <body class="landing-page"> 
+    <body class="landing-page">
 
         <!-- Nav for the header below -->
         <div class = "headers">
             <a href="index.html"><img id="logo" src="log2.png" alt="logo"></a>
             <nav class="navbar">
-                <a href="about_us.html">About Us</a>
+                <a href="#about-us">About Us</a>
                 <a href="destinations.html">Destinations</a>
                 <a href="travelling_p.html" class="dropdown-toggle">Travelling Packages
                     <img class="dropping" src="dropping.png" alt="dropdown">
@@ -29,7 +29,7 @@
                 <a href="bookings.html"><img id="icon" src ="cart.jpg" alt="Booking_icon" >Bookings</a>
             </nav>
         </div>
-            <div class="hover-line"></div> 
+        <div class="hover-line"></div>
         <div class="floating"></div> <!-- removing the floating for logo-->
         <h1 class="name">Akwabeza Tours</h1>
         <!-- footer -->
@@ -47,6 +47,7 @@
                 <img src="slide7.webp" alt="picture">
             </marquee>
         </div>
+
         <h1 class="title2">What we do:</h1>
         <div class="trip-list">
             <div>
@@ -65,7 +66,7 @@
 
         <!-- section for mission and vision -->
         <section class="mission-vision">
-            <div class="mission-container">
+            <div id ="about-us" class="mission-container">
                 <div class="vision-box">
                     <h2>Our Vision</h2>
                     <div class="content-box">
@@ -177,6 +178,43 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- board members -->
+        <section class="board-members">
+            <h2 class="board-title">Our Leadership</h2>
+            <h3 class="row-title">Executive Board</h3>
+            <div class="board-container">
+                <div class="board-box">
+                    <div class="board-image">
+                        <img src="CEO1.jpeg" alt="CEO Portrait">
+                        <div class="social-overlay">
+                            <a href="https://www.linkedin.com/in/placide-shema-25b0182a2/" class="fa fa-linkedin"></a>
+                            <a href="mailto:placide.shema@tufts.edu" class="fa fa-envelope"></a>
+                        </div>
+                    </div>
+                    <div class="board-content">
+                        <h3 class="member-name">Placide Shema</h3>
+                        <p class="member-position">Chief Executive Officer</p>
+                        <p class="member-bio">With over 3 years of experience in tourism and hospitality management, Placide who currently study at Tufts brings strategic vision and innovative leadership to Akwabeza Tours. His commitment to sustainable tourism has earned him numerous industry accolades.</p>
+                    </div>
+                </div>
+
+                <div class="board-box">
+                    <div class="board-image">
+                        <img src="ohene.webp" alt="COO Portrait">
+                        <div class="social-overlay">
+                            <a href="https://www.linkedin.com/in/ohene-a-nkansah/" class="fa fa-linkedin"></a>
+                            <a href="mailto:ohene.nkansah@tufts.edu" class="fa fa-envelope"></a>
+                        </div>
+                    </div>
+                    <div class="board-content">
+                        <h3 class="member-name">Ohene Nkansah</h3>
+                        <p class="member-position">Chief Operations Officer</p>
+                        <p class="member-bio">Mr. Ohene expertise in operations management and his deep understanding of African culture have been instrumental in creating authentic and seamless travel experiences for our clients.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <script src="script.js"></script>
