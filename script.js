@@ -175,3 +175,19 @@ document.addEventListener("DOMContentLoaded", function() {
         input.addEventListener("input", () => resetBorder(input));
     });
 });
+
+$(document).ready(function() {
+    $('a[href^="#about-us"]').on('click', function(event) {
+      event.preventDefault();
+  
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+    });
+  });
+
+// move to login page after clicking login tab
+document.getElementById("loginButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    window.location.href = "login.html"; // Redirect to the new HTML page
+});
