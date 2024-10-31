@@ -532,3 +532,7 @@ tr:nth-child(odd) td:nth-child(even),
 tr:nth-child(even) td:nth-child(odd){
     background-color: rgba(7, 222, 79, 0.5);
 }
+
+.table-title {
+    font-size: 3vw;
+}
